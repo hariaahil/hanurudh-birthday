@@ -10,3 +10,13 @@
 @keyframes rabbitEar{0%,100%{transform:rotate(0)}30%{transform:rotate(-5deg)}55%{transform:rotate(3deg)}70%{transform:rotate(-2deg)}}
 .twinkle-layer{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}.twinkle{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff9b0;box-shadow:0 0 7px 3px #fff5a0,0 0 18px 5px #ffd34a;animation:particleBlink var(--dur) ease-in-out var(--delay) infinite;opacity:0}
 @keyframes particleBlink{0%,100%{opacity:0;transform:scale(.3)}40%{opacity:.95;transform:scale(1)}65%{opacity:.25;transform:scale(.6)}}
+
+/* Character-sheet artwork layer: use the committed 6-character source sheet as cropped panels */
+.animal{font-size:0!important;color:transparent;background-image:url('assets/png/file_00000000c8388207adfb880737a1d050.png');background-repeat:no-repeat;background-size:300% 200%;background-color:transparent;filter:drop-shadow(0 8px 7px #0007);width:clamp(100px,26vw,210px);height:clamp(120px,30vw,230px);}
+.monkey{background-position:0% 0%;left:2%;top:5%;}
+.bird{background-position:50% 0%;right:4%;top:6%;}
+.giraffe{background-position:100% 0%;right:0%;top:28%;}
+.elephant{background-position:0% 100%;left:0%;bottom:12%;}
+.lion{background-position:50% 100%;right:18%;bottom:10%;}
+.rabbit{background-position:100% 100%;right:1%;bottom:10%;}
+@media(max-width:600px){.animal{width:clamp(88px,25vw,140px);height:clamp(110px,28vw,165px)}.monkey{top:5%;}.bird{top:7%;}.giraffe{top:27%;}.elephant{bottom:10%;}.lion{right:18%;bottom:10%;}.rabbit{bottom:9%;}}
