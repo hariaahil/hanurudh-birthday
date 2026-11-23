@@ -109,3 +109,9 @@ body{background-size:100% auto!important;background-position:center top!importan
 .portrait{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;border:0!important;border-radius:50%!important;overflow:hidden!important}
 .portrait img{width:100%!important;height:100%!important;display:block!important;object-fit:cover!important;object-position:center 45%!important;border-radius:50%!important}
 @media(max-width:600px){.portrait-ring{top:42vw!important;width:35.5vw!important;}}
+
+/* Align portrait crop precisely inside the circular opening of the supplied artwork */
+.portrait-ring{width:min(49vw,285px)!important;aspect-ratio:1!important;border:0!important;box-shadow:none!important;background:transparent!important;overflow:hidden!important;border-radius:50%!important;margin:clamp(155px,26vw,225px) auto 0!important;padding:0!important}
+.portrait,.portrait img{width:100%!important;height:100%!important;aspect-ratio:1!important;border-radius:50%!important;overflow:hidden!important;border:0!important;display:block!important}
+.portrait img{object-fit:cover!important;object-position:center 38%!important}
+@media(max-width:600px){.portrait-ring{width:min(49vw,245px)!important;margin-top:170px!important}}
