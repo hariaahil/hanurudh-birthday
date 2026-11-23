@@ -37,3 +37,36 @@ body:before{background:linear-gradient(180deg,#06381e22 0%,#041c0e33 100%);z-ind
 .scene .animal{animation-duration:3.4s!important;animation-timing-function:ease-in-out!important;animation-iteration-count:infinite!important}
 .scene{overflow:visible!important}
 @media(max-width:600px){.scene{min-height:740px!important}.animal{font-size:clamp(2.7rem,11vw,5rem)!important}.monkey{top:8%!important;left:0!important}.bird{top:8%!important;right:0!important}.giraffe{top:36%!important;right:0!important}.elephant{bottom:15%!important;left:0!important}.lion{bottom:13%!important;right:20%!important}.rabbit{bottom:13%!important;right:0!important}}
+
+/* Reference composition: compact, layered invitation rather than separated blocks */
+body{background-position:center top!important;background-size:cover!important;background-repeat:no-repeat!important;background-attachment:scroll!important}
+body:before{background:linear-gradient(180deg,rgba(0,20,8,.06),rgba(0,20,8,.13))!important}
+.titleboard{margin:18px auto 0!important;width:min(92%,700px)!important;padding:18px 10px 12px!important;border-radius:26px!important}
+.crown{font-size:clamp(32px,7vw,48px)!important;margin-top:-34px!important}
+h1{font-size:clamp(2rem,8vw,4.2rem)!important}
+.titleboard h2 span{font-size:clamp(1.5rem,6.4vw,3rem)!important}
+.ribbon{margin-top:7px!important;padding:6px 24px!important;font-size:1.05rem!important}
+.scene{min-height:clamp(560px,83vw,720px)!important;max-width:900px!important;margin:0 auto!important}
+.portrait-ring{margin-top:clamp(85px,13vw,115px)!important;width:min(58vw,330px)!important}
+.cake{margin-top:-5px!important;width:min(200px,42vw)!important}
+.wood-panel{margin:-2px auto 18px!important;padding:13px 9px!important;width:min(94%,850px)!important;gap:10px!important;border-radius:28px!important}
+.event-date,.event-place{gap:8px!important}.ico{font-size:clamp(25px,5vw,40px)!important}
+.gallery{margin:18px auto!important}.gallery h2{margin-bottom:8px!important;padding:8px 15px!important}
+.photos{gap:6px!important}.photos img{height:clamp(88px,13vw,120px)!important;border-width:3px!important;border-radius:16px!important}
+.map{height:clamp(190px,25vw,260px)!important;margin:20px auto!important;border-radius:24px!important}
+.actions{gap:9px!important;padding:10px!important}.actions a{padding:13px 18px!important;font-size:clamp(.95rem,3.5vw,1.3rem)!important;border-width:3px!important}
+footer{padding:20px 10px!important}
+@media(max-width:600px){
+.titleboard{margin-top:15px!important}
+.scene{min-height:590px!important}
+.portrait-ring{margin-top:78px!important;width:min(58vw,270px)!important}
+.cake{width:155px!important}
+.wood-panel{flex-wrap:nowrap!important}
+.event-date,.event-place{flex:1;min-width:0}
+.event b,.event strong{font-size:clamp(.82rem,3.4vw,1.1rem)!important}
+.event small{font-size:clamp(.75rem,3vw,.95rem)!important}
+.gallery h2{font-size:1.05rem!important}
+.photos img{flex:0 0 35%!important;width:35%!important;height:100px!important}
+.map{height:205px!important}
+.actions a{flex:1;min-width:0;padding:13px 9px!important}
+}
