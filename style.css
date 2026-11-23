@@ -40,3 +40,13 @@
 .details>* , .gallery-section>* , .location>*{position:relative;z-index:1}
 .story-reveal{opacity:0;transform:translateY(24px)}.story-reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:700px){.details:before,.gallery-section:before,.location:before{background-position:center!important}}
+
+/* Countdown badge over the portrait */
+.hero-photo{position:relative;overflow:visible}.countdown-overlay{position:absolute;left:50%;bottom:-31px;transform:translateX(-50%);z-index:5;display:flex;justify-content:center;gap:6px;padding:8px 10px;background:#183b28eF;border:2px solid #f1d18b;border-radius:999px;box-shadow:0 10px 26px #081c1280;white-space:nowrap;color:#fff}.countdown-overlay span{background:transparent!important;color:#fff!important;font-size:11px!important;padding:2px 5px!important}.countdown-overlay b{font-size:14px!important;color:#f3d58e}.hero-photo{margin-bottom:42px}
+/* Stronger, unmistakable alternating story-scene parallax */
+.details:before,.gallery-section:before,.location:before{background-attachment:fixed!important;background-size:cover!important;opacity:1!important}
+.details:before{background-image:linear-gradient(180deg,#fff9ec82,#fff9ecb0),url('https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1800&q=85')!important}
+.gallery-section:before{background-image:linear-gradient(180deg,#fff9ec80,#fff9ecaa),url('https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1800&q=85')!important}
+.location:before{background-image:linear-gradient(180deg,#fff9ec80,#fff9ecaa),url('https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=1800&q=85')!important}
+.detail-card,.gallery figure,.location-copy,.map{backdrop-filter:blur(2px)}
+@media(max-width:700px){.details:before,.gallery-section:before,.location:before{background-attachment:scroll!important}.countdown-overlay{bottom:-30px;gap:3px;padding:6px 8px}.countdown-overlay span{font-size:10px!important}.countdown-overlay b{font-size:12px!important}.hero-photo{margin-bottom:42px}}
