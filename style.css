@@ -16,7 +16,7 @@
 .animal{font-size:clamp(3rem,12vw,7rem)!important;color:initial!important;background-image:none!important;background-position:initial!important;background-size:initial!important;width:auto!important;height:auto!important;}
 
 /* Reference composition and uploaded jungle backdrop tuning */
-body{background-color:#103e20;background-image:url('assets/png/jungle-animals.png');background-position:center top;background-size:100% auto;background-repeat:repeat-y;background-attachment:scroll}
+body{background-color:#103e20;background-image:url('assets/png/file_0000000047588211b4ae1dd5d018368d.png');background-position:center top;background-size:100% auto;background-repeat:repeat-y;background-attachment:scroll}
 body:before{background:linear-gradient(180deg,#06381e22 0%,#041c0e33 100%);z-index:0}
 .stars{z-index:0;opacity:.16}
 .titleboard{margin-top:22px;width:min(92%,700px);padding:24px 12px 14px;transform:none}
@@ -29,3 +29,11 @@ body:before{background:linear-gradient(180deg,#06381e22 0%,#041c0e33 100%);z-ind
 .cake{z-index:5;margin:-5px auto 0}
 .grass{z-index:1;pointer-events:none}
 @media(max-width:600px){.titleboard{margin-top:20px;padding:20px 10px 12px}.scene{min-height:700px;padding:0}.portrait-ring{width:min(58vw,270px);margin-top:100px}.monkey{left:1%;top:6%}.bird{right:1%;top:7%}.giraffe{right:1%;top:35%}.elephant{left:0;bottom:15%}.lion{right:17%;bottom:14%}.rabbit{right:0;bottom:14%}.cake{width:165px}}
+
+/* Browser-tested refinements: make scene motion and twinkles visibly animate */
+.stars{animation:starsPulse 2.6s ease-in-out infinite alternate!important;opacity:.32!important;background-size:37px 37px!important}
+@keyframes starsPulse{0%{opacity:.12;filter:brightness(.8)}100%{opacity:.52;filter:brightness(1.5)}}
+.twinkle-layer{z-index:2!important}
+.scene .animal{animation-duration:3.4s!important;animation-timing-function:ease-in-out!important;animation-iteration-count:infinite!important}
+.scene{overflow:visible!important}
+@media(max-width:600px){.scene{min-height:740px!important}.animal{font-size:clamp(2.7rem,11vw,5rem)!important}.monkey{top:8%!important;left:0!important}.bird{top:8%!important;right:0!important}.giraffe{top:36%!important;right:0!important}.elephant{bottom:15%!important;left:0!important}.lion{bottom:13%!important;right:20%!important}.rabbit{bottom:13%!important;right:0!important}}
