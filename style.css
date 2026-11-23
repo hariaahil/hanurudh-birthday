@@ -70,3 +70,11 @@ footer{padding:20px 10px!important}
 .map{height:205px!important}
 .actions a{flex:1;min-width:0;padding:13px 9px!important}
 }
+
+/* Curved wooden title plaque, reference-style typography */
+.titleboard{background:radial-gradient(ellipse at 50% 12%,#bd8245 0%,#8a5129 48%,#5b321a 100%)!important;border:8px solid #d7a45b!important;border-radius:48% 48% 22px 22px/28% 28% 22px 22px!important;box-shadow:0 12px 20px #0008,inset 0 0 0 3px #75451f,inset 0 0 18px #f0c37b!important;position:relative!important}
+.titleboard:before{content:"";position:absolute;inset:7px;border:2px solid #e4b76d;border-radius:48% 48% 16px 16px/28% 28% 16px 16px;pointer-events:none}
+.titleboard h1{font-family:"Brush Script MT","Segoe Script",cursive!important;font-weight:800!important;font-style:italic!important;letter-spacing:-1px!important;transform:rotate(-3deg)!important;color:#fff5df!important;text-shadow:0 4px 2px #4a2510,0 0 8px #c78c54!important}
+.titleboard h2 span{font-family:Georgia,"Times New Roman",serif!important;font-weight:900!important;letter-spacing:-1px!important;color:#ffd633!important;text-shadow:0 3px 1px #713d10,0 0 8px #a56820!important}
+.ribbon{font-family:Georgia,serif!important;font-weight:900!important;transform:rotate(-2deg)!important;background:linear-gradient(#ffe89a,#f0c05d)!important;box-shadow:0 4px 8px #47220d!important}
+@media(max-width:600px){.titleboard{border-radius:48% 48% 20px 20px/25% 25% 20px 20px!important;padding-top:24px!important}.titleboard h1{font-size:clamp(2rem,9vw,3.1rem)!important}.titleboard h2 span{font-size:clamp(1.45rem,6.8vw,2.4rem)!important}.ribbon{font-size:1rem!important}}
