@@ -50,3 +50,16 @@
 .location:before{background-image:linear-gradient(180deg,#fff9ec80,#fff9ecaa),url('https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=1800&q=85')!important}
 .detail-card,.gallery figure,.location-copy,.map{backdrop-filter:blur(2px)}
 @media(max-width:700px){.details:before,.gallery-section:before,.location:before{background-attachment:scroll!important}.countdown-overlay{bottom:-30px;gap:3px;padding:6px 8px}.countdown-overlay span{font-size:10px!important}.countdown-overlay b{font-size:12px!important}.hero-photo{margin-bottom:42px}}
+
+/* Personal-photo parallax scenes — use the family's own gallery images, never stock imagery */
+.details:before,.gallery-section:before,.location:before{z-index:0!important;opacity:1!important;pointer-events:none!important;background-size:cover!important;background-position:center!important;background-attachment:fixed!important}
+.details:before{background-image:linear-gradient(180deg,#fff9ecb0,#fff9ecb0),url('assets/png/baby-06.jpg')!important}
+.gallery-section:before{background-image:linear-gradient(180deg,#fff9ecb0,#fff9ecb0),url('assets/png/baby-08.jpg')!important}
+.location:before{background-image:linear-gradient(180deg,#fff9ecb0,#fff9ecb0),url('assets/png/baby-05.jpg')!important}
+.details>* , .gallery-section>* , .location>*{position:relative;z-index:1}
+/* A gentle layered movement, not an aggressive fixed-photo jump */
+.details:before,.gallery-section:before,.location:before{transition:background-position 1s ease,filter .6s ease;filter:saturate(.9)}
+.detail-card{background:#fffdf6ee!important;border-color:#e9d8b6!important;box-shadow:0 18px 45px #233a2517!important}
+.gallery figure{box-shadow:0 18px 40px #263b2818!important}
+@media(max-width:700px){.details:before,.gallery-section:before,.location:before{background-attachment:scroll!important;background-position:center!important}}
+@media(prefers-reduced-motion:reduce){.details:before,.gallery-section:before,.location:before{background-attachment:scroll!important;transition:none!important}}
