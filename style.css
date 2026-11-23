@@ -115,3 +115,15 @@ body{background-size:100% auto!important;background-position:center top!importan
 .portrait,.portrait img{width:100%!important;height:100%!important;aspect-ratio:1!important;border-radius:50%!important;overflow:hidden!important;border:0!important;display:block!important}
 .portrait img{object-fit:cover!important;object-position:center 38%!important}
 @media(max-width:600px){.portrait-ring{width:min(49vw,245px)!important;margin-top:170px!important}}
+
+/* Final responsive cleanup: PNG cutout characters, no emoji placeholders */
+body{background-size:100% auto!important;background-position:center top!important;background-repeat:repeat-y!important;background-attachment:scroll!important}
+.animal{font-size:0!important;width:clamp(64px,15vw,170px)!important;height:auto!important;background:none!important;display:block!important;overflow:visible!important}
+.animal img{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;filter:drop-shadow(0 7px 6px rgba(0,0,0,.25))!important}
+.monkey{width:clamp(72px,17vw,175px)!important}.bird{width:clamp(65px,13vw,145px)!important}.elephant{width:clamp(85px,19vw,190px)!important}.giraffe{width:clamp(68px,15vw,150px)!important}.lion{width:clamp(78px,17vw,165px)!important}.rabbit{width:clamp(65px,13vw,135px)!important}
+.portrait-ring{position:absolute!important;left:50%!important;top:42vw!important;transform:translateX(-50%)!important;margin:0!important;width:min(35.5vw,330px)!important;max-width:330px!important;aspect-ratio:1!important;overflow:hidden!important;border-radius:50%!important;box-shadow:none!important;border:0!important;background:transparent!important}
+.portrait,.portrait img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;aspect-ratio:1!important;border:0!important;border-radius:50%!important;overflow:hidden!important;display:block!important}
+.portrait img{object-fit:cover!important;object-position:center 45%!important}
+.scene{overflow:hidden!important}
+@media(max-width:600px){.animal{max-width:29vw!important}.portrait-ring{top:42vw!important;width:35.5vw!important}.scene{min-height:590px!important}.wood-panel{flex-wrap:wrap!important}.event-date,.event-place{justify-content:center}}
+@media(min-width:601px){.portrait-ring{top:42vw!important}}
