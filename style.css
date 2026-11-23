@@ -63,3 +63,28 @@
 .gallery figure{box-shadow:0 18px 40px #263b2818!important}
 @media(max-width:700px){.details:before,.gallery-section:before,.location:before{background-attachment:scroll!important;background-position:center!important}}
 @media(prefers-reduced-motion:reduce){.details:before,.gallery-section:before,.location:before{background-attachment:scroll!important;transition:none!important}}
+
+/* Enchanted midnight birthday theme: twinkling stars, snow, candles & balloons */
+body{background:#101c20;color:#e9e8df}
+.details,.gallery-section,.location{background:#122126!important;color:#e8e9df}
+.details:before,.gallery-section:before,.location:before{background-image:none!important;opacity:.15!important}
+.details:before{background-image:linear-gradient(#142329cc,#142329cc),url('assets/png/baby-06.jpg')!important}
+.gallery-section:before{background-image:linear-gradient(#142329cc,#142329cc),url('assets/png/baby-08.jpg')!important}
+.location:before{background-image:linear-gradient(#142329cc,#142329cc),url('assets/png/baby-05.jpg')!important}
+.section-head h2,.location h2{color:#f5d99a!important}.section-head .eyebrow,.location .eyebrow{color:#d9b96f!important}.subhead,.location-copy p:not(.eyebrow){color:#c5d0ce!important}
+.detail-card{background:#182b30f2!important;border:1px solid #b99a5c55!important;color:#f2eee2!important}.detail-card h3,.detail-card strong{color:#f4d99b!important}.detail-card p{color:#c8d2cf!important}.card-label{color:#c3aa70!important}.text-link{color:#e3c57e!important;border-color:#bda367!important}
+.gallery figure{border-color:#e5c783!important}.gallery-arrow{background:#1c3035!important;color:#f3d68e!important;border-color:#c6a965!important}.dots button{background:#627b78}.dots button.active{background:#f0cc79}
+.map{border-color:#203338!important}.closing{background:radial-gradient(ellipse at 50% 0%,#314a50,#0e191d)!important}.closing h2{color:#f5d99a!important}.closing p{color:#d2dcda!important}footer{color:#a8bab7!important;background:#101c20}
+.hero{background:radial-gradient(ellipse at 50% 15%,#304e53 0%,#172d33 55%,#0e1b20 100%)!important}.hero:after{background:radial-gradient(ellipse at center 35%,#9e855030,transparent 70%),linear-gradient(180deg,#07111666,transparent 55%,#101c20)!important}.hero h1 em{color:#f5d99a!important}.eyebrow{color:#e1c47d!important}.hero-copy{color:#e1e9e7!important}.primary-btn,.share-btn{background:linear-gradient(135deg,#e8ca84,#bb9452)!important;color:#172a2c!important}
+.countdown-overlay{background:#101d22ee!important;border-color:#f1d18b!important}
+/* Ambient floating balloon sprites */
+.ambient-balloon{position:fixed;bottom:-140px;z-index:9;width:30px;height:40px;border-radius:50% 50% 45% 45%;pointer-events:none;opacity:.7;animation:ambientRise linear forwards;box-shadow:inset -5px -5px 8px #0002,0 0 12px currentColor}.ambient-balloon:after{content:'';position:absolute;left:50%;bottom:-5px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:8px solid currentColor}.ambient-balloon:before{content:'';position:absolute;left:50%;top:43px;height:70px;border-left:1px solid #ffffff55}
+@keyframes ambientRise{to{transform:translateY(-120vh) translateX(var(--drift));opacity:0}}
+/* falling snow and glitter overlay */
+#magic-layer{position:fixed;inset:0;z-index:8;pointer-events:none;overflow:hidden}.magic-flake{position:absolute;top:-20px;color:#fff9df;text-shadow:0 0 8px #d8e7e8,0 0 18px #fff;animation:snowFall linear infinite;opacity:.75}.magic-flake.glitter{color:#f8d98b;text-shadow:0 0 8px #f8d98b,0 0 16px #fff;animation:glitterFall linear infinite}
+@keyframes snowFall{to{transform:translateY(110vh) translateX(var(--sway)) rotate(360deg)}}
+/* Animated candle-like warm lights around the page edges */
+.ambient-candle{position:fixed;z-index:7;bottom:18px;width:12px;height:48px;border-radius:4px;background:linear-gradient(90deg,#b99457,#f4dfad,#a78045);opacity:.72;pointer-events:none;box-shadow:0 0 22px #f5cb7180}.ambient-candle:before{content:'';position:absolute;width:5px;height:12px;background:radial-gradient(ellipse,#fff8c9 0%,#ffcc65 45%,#ff7b35 80%,transparent);top:-14px;left:3px;filter:blur(.4px);animation:flame 1.4s ease-in-out infinite alternate}.ambient-candle:after{content:'';position:absolute;top:6px;left:2px;width:8px;height:4px;background:#fff4c5;border-radius:50%;opacity:.35}
+@keyframes flame{from{transform:scale(.85) rotate(-3deg);filter:blur(.2px)}to{transform:scale(1.25) rotate(4deg);filter:blur(1px)}}
+@media(max-width:700px){.ambient-candle{width:8px;height:35px;bottom:10px}.ambient-candle:before{left:2px}}
+@media(prefers-reduced-motion:reduce){.ambient-balloon,.magic-flake,.ambient-candle:before{animation:none!important}}
