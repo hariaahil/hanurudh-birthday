@@ -78,3 +78,24 @@ footer{padding:20px 10px!important}
 .titleboard h2 span{font-family:Georgia,"Times New Roman",serif!important;font-weight:900!important;letter-spacing:-1px!important;color:#ffd633!important;text-shadow:0 3px 1px #713d10,0 0 8px #a56820!important}
 .ribbon{font-family:Georgia,serif!important;font-weight:900!important;transform:rotate(-2deg)!important;background:linear-gradient(#ffe89a,#f0c05d)!important;box-shadow:0 4px 8px #47220d!important}
 @media(max-width:600px){.titleboard{border-radius:48% 48% 20px 20px/25% 25% 20px 20px!important;padding-top:24px!important}.titleboard h1{font-size:clamp(2rem,9vw,3.1rem)!important}.titleboard h2 span{font-size:clamp(1.45rem,6.8vw,2.4rem)!important}.ribbon{font-size:1rem!important}}
+
+/* User-requested: use the uploaded artwork's built-in wood plaque and portrait ring.
+   Remove generated CSS board/ring treatments; overlay text/photo only. */
+.titleboard{background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important;transform:none!important;padding:0!important;width:100%!important;max-width:none!important;margin:0!important;position:absolute!important;top:7%!important;left:0!important;z-index:5!important}
+.titleboard:before{display:none!important}
+.crown{display:none!important}
+.titleboard h1,.titleboard h2,.ribbon{background:none!important;border:0!important;box-shadow:none!important;border-radius:0!important;clip-path:none!important;padding:0!important;margin:0!important}
+.titleboard h1{font-family:"Brush Script MT","Segoe Script",cursive!important;font-size:clamp(2.2rem,9vw,4rem)!important;font-style:italic!important;transform:none!important;text-shadow:0 3px 3px #57300d!important}
+.titleboard h2 span{font-size:clamp(1.7rem,7vw,3rem)!important}
+.ribbon{font-size:clamp(1rem,4vw,1.35rem)!important;transform:none!important}
+.scene{position:relative!important}
+.portrait-ring{border:0!important;box-shadow:none!important;background:transparent!important;border-radius:50%!important;overflow:hidden!important;width:min(56vw,320px)!important;aspect-ratio:1!important;margin:clamp(120px,22vw,190px) auto 0!important;z-index:3!important}
+.portrait{width:100%!important;height:100%!important;border:0!important;border-radius:50%!important;overflow:hidden!important}
+.portrait img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;border-radius:50%!important;display:block!important}
+.little-crown{display:none!important}
+@media(max-width:600px){
+.titleboard{top:6%!important}
+.titleboard h1{font-size:clamp(2rem,9vw,3.2rem)!important}
+.titleboard h2 span{font-size:clamp(1.45rem,6.7vw,2.5rem)!important}
+.portrait-ring{width:min(55vw,265px)!important;margin-top:145px!important}
+}
