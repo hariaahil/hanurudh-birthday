@@ -14,3 +14,18 @@
 
 /* Keep character placeholders visible until each uploaded cutout is visually verified */
 .animal{font-size:clamp(3rem,12vw,7rem)!important;color:initial!important;background-image:none!important;background-position:initial!important;background-size:initial!important;width:auto!important;height:auto!important;}
+
+/* Reference composition and uploaded jungle backdrop tuning */
+body{background-color:#103e20;background-image:url('assets/png/jungle-animals.png');background-position:center top;background-size:100% auto;background-repeat:repeat-y;background-attachment:scroll}
+body:before{background:linear-gradient(180deg,#06381e22 0%,#041c0e33 100%);z-index:0}
+.stars{z-index:0;opacity:.16}
+.titleboard{margin-top:22px;width:min(92%,700px);padding:24px 12px 14px;transform:none}
+.scene{min-height:720px;margin:0 auto;padding:0 8px;overflow:visible;isolation:isolate}
+.forest-glow{background:radial-gradient(ellipse at 50% 46%,#b6d84a20,transparent 65%);pointer-events:none}
+.portrait-ring{width:min(60vw,330px);margin:100px auto 0;position:relative;z-index:3;border-width:10px;box-shadow:0 0 0 5px #d8b358,0 0 20px #ffd64b}
+.portrait{border-width:4px}
+.animal{z-index:4}
+.monkey{left:2%;top:5%}.bird{right:2%;top:7%}.giraffe{right:2%;top:34%}.elephant{left:0;bottom:16%}.lion{right:17%;bottom:13%}.rabbit{right:0;bottom:13%}
+.cake{z-index:5;margin:-5px auto 0}
+.grass{z-index:1;pointer-events:none}
+@media(max-width:600px){.titleboard{margin-top:20px;padding:20px 10px 12px}.scene{min-height:700px;padding:0}.portrait-ring{width:min(58vw,270px);margin-top:100px}.monkey{left:1%;top:6%}.bird{right:1%;top:7%}.giraffe{right:1%;top:35%}.elephant{left:0;bottom:15%}.lion{right:17%;bottom:14%}.rabbit{right:0;bottom:14%}.cake{width:165px}}
