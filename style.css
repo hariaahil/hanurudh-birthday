@@ -99,3 +99,6 @@ footer{padding:20px 10px!important}
 .titleboard h2 span{font-size:clamp(1.45rem,6.7vw,2.5rem)!important}
 .portrait-ring{width:min(55vw,265px)!important;margin-top:145px!important}
 }
+
+/* Fix background scaling: align the full reference artwork with its overlay elements */
+body{background-size:100% auto!important;background-position:center top!important;background-repeat:repeat-y!important;background-attachment:scroll!important}
