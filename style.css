@@ -102,3 +102,10 @@ footer{padding:20px 10px!important}
 
 /* Fix background scaling: align the full reference artwork with its overlay elements */
 body{background-size:100% auto!important;background-position:center top!important;background-repeat:repeat-y!important;background-attachment:scroll!important}
+
+/* Precisely overlay the baby's photo inside the existing circular opening in the background art */
+.scene{position:relative!important}
+.portrait-ring{position:absolute!important;left:50%!important;top:42vw!important;transform:translateX(-50%)!important;margin:0!important;width:35.5vw!important;max-width:330px!important;aspect-ratio:1!important;border-radius:50%!important;border:0!important;box-shadow:none!important;background:transparent!important;overflow:hidden!important;z-index:3!important}
+.portrait{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;border:0!important;border-radius:50%!important;overflow:hidden!important}
+.portrait img{width:100%!important;height:100%!important;display:block!important;object-fit:cover!important;object-position:center 45%!important;border-radius:50%!important}
+@media(max-width:600px){.portrait-ring{top:42vw!important;width:35.5vw!important;}}
