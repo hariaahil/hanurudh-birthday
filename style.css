@@ -88,3 +88,6 @@ body{background:#101c20;color:#e9e8df}
 @keyframes flame{from{transform:scale(.85) rotate(-3deg);filter:blur(.2px)}to{transform:scale(1.25) rotate(4deg);filter:blur(1px)}}
 @media(max-width:700px){.ambient-candle{width:8px;height:35px;bottom:10px}.ambient-candle:before{left:2px}}
 @media(prefers-reduced-motion:reduce){.ambient-balloon,.magic-flake,.ambient-candle:before{animation:none!important}}
+
+/* Tiny visitor counter */
+.visitor-count{display:block;width:100%;text-align:center;font-size:9px;opacity:.45;font-weight:400;letter-spacing:.04em;margin-top:6px}
