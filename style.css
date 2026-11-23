@@ -30,3 +30,13 @@
 .hero{background-attachment:fixed;background-position:center}
 @media(max-width:700px){.details:before,.gallery-section:before,.location:before{background-attachment:scroll}.hero{background-attachment:scroll}}
 @media(prefers-reduced-motion:reduce){.story-reveal{opacity:1;transform:none;transition:none}}
+
+/* FIX: make story scenes visibly layered above the section canvas and below content */
+.details,.gallery-section,.location{isolation:isolate;position:relative;background:transparent!important}
+.details:before,.gallery-section:before,.location:before{z-index:0!important;opacity:1!important;background-size:cover!important;background-position:center!important;pointer-events:none!important}
+.details:before{background-image:linear-gradient(90deg,#fff9ecd9,#fff9ecb0),url('https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1800&q=85')!important}
+.gallery-section:before{background-image:linear-gradient(90deg,#fff9ecd0,#fff9ecaa),url('https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1800&q=85')!important}
+.location:before{background-image:linear-gradient(90deg,#fff9ecd0,#fff9ecaa),url('https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=1800&q=85')!important}
+.details>* , .gallery-section>* , .location>*{position:relative;z-index:1}
+.story-reveal{opacity:0;transform:translateY(24px)}.story-reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:700px){.details:before,.gallery-section:before,.location:before{background-position:center!important}}
