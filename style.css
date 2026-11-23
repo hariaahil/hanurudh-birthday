@@ -17,3 +17,16 @@
 /* Tiny inline countdown */
 .countdown{gap:5px;margin-top:12px;flex-wrap:nowrap;justify-content:flex-start}.countdown span{padding:5px 7px;font-size:10px;border-radius:7px;white-space:nowrap}.countdown b{font-size:13px}.countdown span>*{display:inline}
 @media(max-width:600px){.countdown{gap:4px;margin-top:10px}.countdown span{padding:4px 6px;font-size:9px}.countdown b{font-size:12px}}
+
+/* Storybook parallax scenes */
+.details,.gallery-section,.location,.closing{position:relative;isolation:isolate;overflow:hidden}
+.details:before,.gallery-section:before,.location:before{content:"";position:absolute;inset:0;z-index:-1;background-size:cover;background-position:center;background-attachment:fixed;opacity:.16;transform:scale(1.04);transition:opacity .8s}
+.details:before{background-image:linear-gradient(#fff9ecbb,#fff9ecbb),url('https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1800&q=80')}
+.gallery-section:before{background-image:linear-gradient(#fff9ecb8,#fff9ecb8),url('https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1800&q=80')}
+.location:before{background-image:linear-gradient(#fff9ecbb,#fff9ecbb),url('https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=1800&q=80')}
+.details,.gallery-section,.location{transition:background-color .6s}
+.story-reveal{opacity:0;transform:translateY(35px);transition:opacity .75s ease,transform .75s ease}
+.story-reveal.visible{opacity:1;transform:translateY(0)}
+.hero{background-attachment:fixed;background-position:center}
+@media(max-width:700px){.details:before,.gallery-section:before,.location:before{background-attachment:scroll}.hero{background-attachment:scroll}}
+@media(prefers-reduced-motion:reduce){.story-reveal{opacity:1;transform:none;transition:none}}
